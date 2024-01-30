@@ -28,7 +28,9 @@ def prediction():
         # Karena modelnya ditrain dalam bentuk Pandas DF,
         # jadi input user harus diolah juga dalam bentuk Pandas DF
         df_prediction = pd.DataFrame({
-            ...
+            "RM": [rm],
+            "LSTAT": [lstat],
+            "PTRATIO": [ptratio],
         })
         
         # Sedikit pre-processing, karena di data training datanya ditransform,
