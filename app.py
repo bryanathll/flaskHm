@@ -15,9 +15,9 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/prediction", methods=["..."])
+@app.route("/prediction", methods=["POST"])
 def prediction():
-    if request.method == "...":
+    if request.method == "POST":
         # Terima input features dari user dalam bentuk float
         # Pastikan request form menerima key yang sama dari atribut name
         # Yang ada di input index.html
@@ -37,7 +37,7 @@ def prediction():
             df_prediction[['RM', 'LSTAT', 'PTRATIO']])
         
         # Lakukan prediksi ke target
-        result_medv = model....(df_prediction)
+        result_medv = model.predict(df_prediction)
         return render_template("prediction.html", medv=result_medv, rm=rm, lstat=lstat, ptratio=ptratio)
 
 
