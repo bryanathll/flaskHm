@@ -10,10 +10,10 @@
 <body>
     <h1>MEDV Prediction</h1>
     {% if medv %}
-    <p>RM: {{ RM }}</p>
-    <p>LSTAT: {{ LSTAT }}</p>
-    <p>PTRATIO: {{ PTRATIO }}</p>
-    <p>MEDV: Prediction {{ ...[0] }}</p>
+    <p>RM: {{ rm }}</p>
+    <p>LSTAT: {{ lstat }}</p>
+    <p>PTRATIO: {{ ptratio }}</p>
+    <p>MEDV: Prediction {{ medv[0] }}</p>
     {% endif %}
     <br>
     <a href="/">Go Back Home Page</a>
